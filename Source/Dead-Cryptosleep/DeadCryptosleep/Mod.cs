@@ -1,7 +1,6 @@
 using System;
 using System.Reflection;
-using Harmony;
-using UnityEngine;
+using HarmonyLib;
 using Verse;
 
 namespace FrontierDevelopments.DeadCryptosleep
@@ -10,7 +9,7 @@ namespace FrontierDevelopments.DeadCryptosleep
     {
         public Mod(ModContentPack content) : base(content)
         {
-            var harmony = HarmonyInstance.Create("FrontierDevelopments.DeadCryptosleep");
+            var harmony = new Harmony("FrontierDevelopments.DeadCryptosleep");
             try
             {
                 harmony.PatchAll(Assembly.GetExecutingAssembly());

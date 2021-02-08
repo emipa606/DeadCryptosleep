@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-    <identifier>FrontierDevelopments-Dead-Cryptosleep</identifier>
-    <version>1.0.0.2408</version>
-    <dependencies>
-    </dependencies>
-    <incompatibleWith>
-    </incompatibleWith>
-    <loadBefore>
-    </loadBefore>
-    <loadAfter>
-    </loadAfter>
-    <suggests>
-    </suggests>
-    <showCrossPromotions>true</showCrossPromotions>
-    <manifestUri>https://raw.githubusercontent.com/rimworld-frontierdevelopment/Dead-Cryptosleep/master/About/Manifest.xml</manifestUri>
-    <downloadUri>https://github.com/rimworld-frontierdevelopment/Dead-Cryptosleep/releases/latest</downloadUri>
+  <identifier>DeadCryptosleep</identifier>
+  <version>1.0.1.0</version>
+  <dependencies />
+  <incompatibleWith />
+  <loadBefore />
+  <loadAfter />
+  <manifestUri>https://raw.githubusercontent.com/emipa606/DeadCryptosleep/master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/emipa606/DeadCryptosleep/releases</downloadUri>
 </Manifest>
+
+

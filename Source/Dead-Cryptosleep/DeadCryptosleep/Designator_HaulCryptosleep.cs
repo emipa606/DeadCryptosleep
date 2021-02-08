@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Harmony;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -39,7 +39,9 @@ namespace FrontierDevelopments.DeadCryptosleep
         public override AcceptanceReport CanDesignateCell(IntVec3 cell)
         {
             if (!cell.InBounds(Map) || cell.Fogged(Map))
+            {
                 return false;
+            }
 
             try
             {

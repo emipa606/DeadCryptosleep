@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Dead Cryptosleep</name>
+  <supportedVersions>
+    <li>1.0</li>
+  </supportedVersions>
+  <author>JohnnyNova</author>
+  <url>https://github.com/rimworld-frontierdevelopment/Dead-Cryptosleep</url>
+  <description>Save corpses from rotting in cryptosleep caskets for resurrection later. Or as a snack.</description>
+</ModMetaData>
