@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -16,12 +14,14 @@ namespace FrontierDevelopments.DeadCryptosleep
             icon = DeadCryptosleepDefOf.CryptosleepCasket.uiIcon;
             iconAngle = DeadCryptosleepDefOf.CryptosleepCasket.uiIconAngle;
             iconOffset = DeadCryptosleepDefOf.CryptosleepCasket.uiIconOffset;
-            iconProportions = DeadCryptosleepDefOf.CryptosleepCasket.graphicData.drawSize.RotatedBy(DeadCryptosleepDefOf.CryptosleepCasket.defaultPlacingRot);
+            iconProportions =
+                DeadCryptosleepDefOf.CryptosleepCasket.graphicData.drawSize.RotatedBy(DeadCryptosleepDefOf
+                    .CryptosleepCasket.defaultPlacingRot);
             iconDrawScale = GenUI.IconDrawScale(DeadCryptosleepDefOf.CryptosleepCasket);
         }
 
         public override int DraggableDimensions => 2;
-        
+
         protected override DesignationDef Designation => DeadCryptosleepDefOf.Deadcryptosleep_Haul;
 
         private bool PodsAreAvailable()
@@ -78,20 +78,6 @@ namespace FrontierDevelopments.DeadCryptosleep
             if (CanDesignateThing(thing).Accepted)
             {
                 Map.designationManager.AddDesignation(new Designation((LocalTargetInfo) thing, Designation));
-            }
-        }
-    }
-
-    [HarmonyPatch(typeof(ReverseDesignatorDatabase), "InitDesignators")]
-    static class Patch_ReverseDesignatorDatabase
-    {
-        [HarmonyPostfix]
-        private static void AddDesignator(List<Designator> ___desList)
-        {
-            var designator = new Designator_HaulCryptosleep();
-            if (Current.Game.Rules.DesignatorAllowed(designator))
-            {
-                ___desList.Add(designator);
             }
         }
     }

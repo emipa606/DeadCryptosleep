@@ -11,9 +11,10 @@ namespace FrontierDevelopments.DeadCryptosleep.Jobs
         private const TargetIndex CryptosleepCasketIndex = TargetIndex.B;
 
         private Corpse Corpse => (Corpse) job.GetTarget(CorpseIndex).Thing;
-        private Building_CryptosleepCasket CryptosleepCasket => 
+
+        private Building_CryptosleepCasket CryptosleepCasket =>
             (Building_CryptosleepCasket) job.GetTarget(CryptosleepCasketIndex).Thing;
-        
+
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return pawn.Reserve(job.GetTarget(CryptosleepCasketIndex), job, 1, -1, null, errorOnFailed)

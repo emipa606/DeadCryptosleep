@@ -33,7 +33,7 @@ namespace FrontierDevelopments.DeadCryptosleep
 
         private static Building_CryptosleepCasket ClosestValidTarget(Map map, IntVec3 position)
         {
-            return (Building_CryptosleepCasket)GenClosest.ClosestThingReachable(
+            return (Building_CryptosleepCasket) GenClosest.ClosestThingReachable(
                 position,
                 map,
                 ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial),
