@@ -1,14 +1,14 @@
 # DeadCryptosleep
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of JohnnyNovas mod
 https://github.com/rimworld-frontierdevelopment/Dead-Cryptosleep
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 # Frontier Developments Dead Cryptosleep
 
@@ -29,7 +29,7 @@ Contributions will be credited to the authors. Merged contributions will be owne
 
 We want to support as many languages as possible. If you would like to submit translations please submit them as pull request.
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
@@ -39,6 +39,7 @@ We want to support as many languages as possible. If you would like to submit tr
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 
