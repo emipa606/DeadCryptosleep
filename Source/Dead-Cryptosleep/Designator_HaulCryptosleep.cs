@@ -64,10 +64,9 @@ public class Designator_HaulCryptosleep : Designator
 
     public override AcceptanceReport CanDesignateThing(Thing thing)
     {
-        switch (thing)
+        if (thing is Corpse)
         {
-            case Corpse:
-                return true;
+            return true;
         }
 
         return "FrontierDevelopments.DeadCryptosleep.Designator.MustBeCorpse".Translate();

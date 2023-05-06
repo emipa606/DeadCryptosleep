@@ -43,3 +43,4 @@ We want to support as many languages as possible. If you would like to submit tr
 
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2388868790]Last updated 2023-05-06

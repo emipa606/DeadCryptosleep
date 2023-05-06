@@ -16,7 +16,7 @@ public class Mod : Verse.Mod
         }
         catch (Exception e)
         {
-            Log.Error("Failed to load harmony patches: " + e.Message + "\n" + e.StackTrace);
+            Log.Error($"Failed to load harmony patches: {e.Message}\n{e.StackTrace}");
         }
     }
 }

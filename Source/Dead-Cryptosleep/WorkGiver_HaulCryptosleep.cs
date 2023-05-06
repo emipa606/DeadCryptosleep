@@ -39,6 +39,6 @@ public class WorkGiver_HaulCryptosleep : WorkGiver_Scanner
             ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial),
             PathEndMode.ClosestTouch,
             TraverseParms.For(TraverseMode.PassDoors),
-            validator: thing => thing is Building_CryptosleepCasket);
+            validator: thing => thing is Building_CryptosleepCasket { HasAnyContents: false });
     }
 }
