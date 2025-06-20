@@ -1,0 +1,6 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Release" />
+  </Configurations>
+  <Project Path="Dead-Cryptosleep/Dead-Cryptosleep.csproj" />
+</Solution>

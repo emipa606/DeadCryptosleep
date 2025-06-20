@@ -20,7 +20,7 @@ public class Designator_HaulCryptosleep : Designator
         iconDrawScale = GenUI.IconDrawScale(DeadCryptosleepDefOf.CryptosleepCasket);
     }
 
-    public override int DraggableDimensions => 2;
+    public override DrawStyleCategoryDef DrawStyleCategory => DrawStyleCategoryDefOf.FilledRectangle;
 
     protected override DesignationDef Designation => DeadCryptosleepDefOf.Deadcryptosleep_Haul;
 

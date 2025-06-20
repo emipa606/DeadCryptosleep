@@ -9,10 +9,9 @@ public class Mod : Verse.Mod
 {
     public Mod(ModContentPack content) : base(content)
     {
-        var harmony = new Harmony("FrontierDevelopments.DeadCryptosleep");
         try
         {
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
+            new Harmony("FrontierDevelopments.DeadCryptosleep").PatchAll(Assembly.GetExecutingAssembly());
         }
         catch (Exception e)
         {

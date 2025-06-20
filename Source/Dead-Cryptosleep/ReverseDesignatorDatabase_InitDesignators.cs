@@ -5,10 +5,9 @@ using Verse;
 namespace FrontierDevelopments.DeadCryptosleep;
 
 [HarmonyPatch(typeof(ReverseDesignatorDatabase), "InitDesignators")]
-internal static class Patch_ReverseDesignatorDatabase
+internal static class ReverseDesignatorDatabase_InitDesignators
 {
-    [HarmonyPostfix]
-    private static void AddDesignator(List<Designator> ___desList)
+    private static void Postfix(List<Designator> ___desList)
     {
         var designator = new Designator_HaulCryptosleep();
         if (Current.Game.Rules.DesignatorAllowed(designator))

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: haul corpse to cryptosleep casket -->
+  <DeadCryptosleep_Haul.label>haul corpse to cryptosleep casket</DeadCryptosleep_Haul.label>
+  <!-- EN: hauling -->
+  <DeadCryptosleep_Haul.gerund>hauling</DeadCryptosleep_Haul.gerund>
+  <!-- EN: haul -->
+  <DeadCryptosleep_Haul.verb>haul</DeadCryptosleep_Haul.verb>
+</LanguageData>
