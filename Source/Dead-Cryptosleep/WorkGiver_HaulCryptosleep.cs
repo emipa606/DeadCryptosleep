@@ -22,7 +22,7 @@ public class WorkGiver_HaulCryptosleep : WorkGiver_Scanner
 
     public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
     {
-        var pod = closestValidTarget(pawn.Map, thing.Position);
+        var pod = closestValidTarget(pawn, thing);
         var corpse = thing as Corpse;
 
         return new Job(DeadCryptosleepDefOf.HaulCorpseToCryptosleepCasket, corpse, pod)
@@ -31,14 +31,20 @@ public class WorkGiver_HaulCryptosleep : WorkGiver_Scanner
         };
     }
 
-    private static Building_CryptosleepCasket closestValidTarget(Map map, IntVec3 position)
+    private static Building_CryptosleepCasket closestValidTarget(Pawn pawn, Thing thing)
     {
+        var map = pawn.Map;
+        var position = thing.Position;
         return (Building_CryptosleepCasket)GenClosest.ClosestThingReachable(
             position,
             map,
             ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial),
             PathEndMode.ClosestTouch,
             TraverseParms.For(TraverseMode.PassDoors),
-            validator: thing => thing is Building_CryptosleepCasket { HasAnyContents: false });
+            validator: possibleThing => possibleThing is Building_CryptosleepCasket or Building_AncientCryptosleepCasket
+                {
+                    HasAnyContents: false
+                } && pawn.CanReserveAndReach(new LocalTargetInfo(possibleThing), PathEndMode.ClosestTouch, Danger.None)
+                  && pawn.CanReserveAndReach(new LocalTargetInfo(thing), PathEndMode.ClosestTouch, Danger.None));
     }
 }

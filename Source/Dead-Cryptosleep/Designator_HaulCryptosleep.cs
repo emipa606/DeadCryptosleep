@@ -30,8 +30,8 @@ public class Designator_HaulCryptosleep : Designator
             .Count(designation => designation.def == DeadCryptosleepDefOf.Deadcryptosleep_Haul);
 
         var availableCaskets = Map.listerBuildings.allBuildingsColonist
-            .OfType<Building_CryptosleepCasket>()
-            .Count(casket => !casket.HasAnyContents);
+            .Count(building => building is Building_CryptosleepCasket or Building_AncientCryptosleepCasket &&
+                               !((Building_Casket)building).HasAnyContents);
 
         return availableCaskets >= designated;
     }

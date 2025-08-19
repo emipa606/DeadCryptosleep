@@ -12,8 +12,8 @@ public class JobDriver_HaulCorpseToCryptosleepCasket : JobDriver
 
     private Corpse Corpse => (Corpse)job.GetTarget(CorpseIndex).Thing;
 
-    private Building_CryptosleepCasket CryptosleepCasket =>
-        (Building_CryptosleepCasket)job.GetTarget(CryptosleepCasketIndex).Thing;
+    private Building_Casket CryptosleepCasket =>
+        (Building_Casket)job.GetTarget(CryptosleepCasketIndex).Thing;
 
     public override bool TryMakePreToilReservations(bool errorOnFailed)
     {
