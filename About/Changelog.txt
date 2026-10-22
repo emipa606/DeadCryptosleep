@@ -1,5 +1,8 @@
 # Changelog for DeadCryptosleep
 
+1.7.0 - Mod updated for 1.7 and passed autotests
+
+
 1.6.1 - Corpses in cryptocaskets does not rot. Added ancient cryto-caskets as valid storage
 
 

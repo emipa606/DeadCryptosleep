@@ -4,7 +4,7 @@ using Verse;
 namespace FrontierDevelopments.DeadCryptosleep;
 
 [DefOf]
-public class DeadCryptosleepDefOf
+public static class DeadCryptosleepDefOf
 {
     public static JobDef HaulCorpseToCryptosleepCasket;
     public static DesignationDef Deadcryptosleep_Haul;

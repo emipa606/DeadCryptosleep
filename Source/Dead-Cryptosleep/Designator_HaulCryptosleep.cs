@@ -36,9 +36,9 @@ public class Designator_HaulCryptosleep : Designator
         return availableCaskets >= designated;
     }
 
-    public override AcceptanceReport CanDesignateCell(IntVec3 cell)
+    public override AcceptanceReport CanDesignateCell(IntVec3 loc)
     {
-        if (!cell.InBounds(Map) || cell.Fogged(Map))
+        if (!loc.InBounds(Map) || loc.Fogged(Map))
         {
             return false;
         }
@@ -46,7 +46,7 @@ public class Designator_HaulCryptosleep : Designator
         try
         {
             CanDesignateThing(
-                Map.thingGrid.ThingsListAt(cell)
+                Map.thingGrid.ThingsListAt(loc)
                     .OfType<Corpse>()
                     .First());
             return true;
@@ -57,14 +57,14 @@ public class Designator_HaulCryptosleep : Designator
         }
     }
 
-    public override void DesignateSingleCell(IntVec3 cell)
+    public override void DesignateSingleCell(IntVec3 c)
     {
-        cell.GetThingList(Map).OfType<Corpse>().ToList().ForEach(DesignateThing);
+        c.GetThingList(Map).OfType<Corpse>().ToList().ForEach(DesignateThing);
     }
 
-    public override AcceptanceReport CanDesignateThing(Thing thing)
+    public override AcceptanceReport CanDesignateThing(Thing t)
     {
-        if (thing is Corpse)
+        if (t is Corpse)
         {
             return true;
         }
@@ -72,11 +72,11 @@ public class Designator_HaulCryptosleep : Designator
         return "FrontierDevelopments.DeadCryptosleep.Designator.MustBeCorpse".Translate();
     }
 
-    public override void DesignateThing(Thing thing)
+    public override void DesignateThing(Thing t)
     {
-        if (CanDesignateThing(thing).Accepted)
+        if (CanDesignateThing(t).Accepted)
         {
-            Map.designationManager.AddDesignation(new Designation((LocalTargetInfo)thing, Designation));
+            Map.designationManager.AddDesignation(new Designation((LocalTargetInfo)t, Designation));
         }
     }
 }

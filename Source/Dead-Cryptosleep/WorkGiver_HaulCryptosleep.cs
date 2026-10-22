@@ -20,10 +20,10 @@ public class WorkGiver_HaulCryptosleep : WorkGiver_Scanner
             .Select(designation => designation.target.Thing);
     }
 
-    public override Job JobOnThing(Pawn pawn, Thing thing, bool forced = false)
+    public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
     {
-        var pod = closestValidTarget(pawn, thing);
-        var corpse = thing as Corpse;
+        var pod = closestValidTarget(pawn, t);
+        var corpse = t as Corpse;
 
         return new Job(DeadCryptosleepDefOf.HaulCorpseToCryptosleepCasket, corpse, pod)
         {
